@@ -53,11 +53,7 @@ while offset < eof:
 
         offset += header_size + packet_length
     else:
-        #to do 
-        ##extract the tag 
-        ## read first byte len
-        ## extract body 
-        ## 
+       
         tag = header_byte & 0x3F
         length = contents[offset + 1]
 
@@ -139,8 +135,7 @@ print(plaintext)
 p = plaintext
 start = p.find(b'b')
 p = p[start:]
-## had trouble having it recognize the beginning this was the only way i could make it realize the beginning was b 
-##maybe there's a better way?
+
 
 type = p[0]
 filelen = p[1]
